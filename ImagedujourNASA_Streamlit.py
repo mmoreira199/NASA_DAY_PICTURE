@@ -29,7 +29,7 @@ def getimage():
     image = Image.open(BytesIO(image))
     return image,legende
      
-
+st.title("The astronomy picture of the Day provided by NASA")
 datechoisie = st.date_input("Date ?")
 datechoisie=str(datechoisie)
 st.write("date choisie:", datechoisie)
