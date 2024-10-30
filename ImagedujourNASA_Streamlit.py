@@ -17,7 +17,7 @@ from io import BytesIO
 from PIL import Image, ImageDraw
 
 import config2
-adresse = f'https://api.nasa.gov/planetary/apod?api_key={config.NASA_API_KEY}'
+adresse = f'https://api.nasa.gov/planetary/apod?api_key={config2.NASA_API_KEY}'
 
 
 
