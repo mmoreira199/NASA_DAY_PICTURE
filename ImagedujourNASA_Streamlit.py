@@ -16,9 +16,13 @@ import requests
 from io import BytesIO
 from PIL import Image, ImageDraw
 
+import config
+adresse = f'https://api.nasa.gov/planetary/apod?api_key={config.NASA_API_KEY}'
 
-def getimage():
-    adresse='https://api.nasa.gov/planetary/apod?api_key=vBsbRn3IvW8j1Mnn3n4Aj3ReLJs9b1AKh37rQa1N'
+
+
+def getimage(adresse):
+    
     adresse=adresse+'&date='+datechoisie
     response = requests.get(adresse)
     data=response.json()
@@ -33,7 +37,7 @@ st.title("The astronomy picture of the Day provided by NASA")
 datechoisie = st.date_input("Date ?")
 datechoisie=str(datechoisie)
 st.write("date choisie:", datechoisie)
-image,legende=getimage()
+image,legende=getimage(adresse)
 st.image(image)
 st.caption(legende)
 
