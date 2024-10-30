@@ -16,7 +16,7 @@ import requests
 from io import BytesIO
 from PIL import Image, ImageDraw
 
-import config
+import config2
 adresse = f'https://api.nasa.gov/planetary/apod?api_key={config.NASA_API_KEY}'
 
 
