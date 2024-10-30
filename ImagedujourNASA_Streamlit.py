@@ -34,6 +34,8 @@ def getimage(adresse):
     return image,legende
      
 st.title("The astronomy picture of the Day provided by NASA")
+st.title("using API")
+
 datechoisie = st.date_input("Date ?")
 datechoisie=str(datechoisie)
 st.write("date choisie:", datechoisie)
