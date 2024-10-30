@@ -17,7 +17,7 @@ from io import BytesIO
 from PIL import Image, ImageDraw
 
 def getimage():
-    adresse = f'https://api.nasa.gov/planetary/apod?api_key={st.secrets["nasa"]["api_key"]}'
+    adresse = f'https://api.nasa.gov/planetary/apod?api_key={st.secrets["api_key"]}'
     adresse = adresse + '&date=' + datechoisie
     response = requests.get(adresse)
     data = response.json()
